@@ -26,9 +26,9 @@ const index = require('./routes');
 //using routes
 app.use('/', index);
 
+const port = process.env.PORT || 4500 ;
+app.listen(port, () => {
 
-app.listen(4111, () => {
-
-    console.log('listening')
+    console.log(`listening ${port}`)
 
 })
