@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: rgb(69, 102, 211);
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: #6fb2df;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+<div class="header">
+  <h2>ALL POSTS</h2>
+  <a href="/">Home Page</a>
+  
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">   
+      <div class="form-group">
+        <form action="/posts" method="post"> 
+        <h2>Write Post here</h2>
+        <h4>Title:</h4>            	
+          <input required type="title" class="form-control" name="title" id="title" placeholder="Title" data-rule="title" data-msg="Please enter a valid title" />
+          <br>
+        <textarea class="form-control" name="status" id="status" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Status"></textarea>
+        <form action="/posts">  
+        <button type="submit" class="btn btn-primary">POST</button>
+      </form>
+    </form>
+
+      </div>
+    </div>
+  </div>
+<% posts.forEach(function(posts) { %>
+<div class="col-1">
+  <div style="margin-left:2.5em" class="leftcolumn">
+    <div class="card">   
+      <h2><%= posts.title %></h2>
+      <p><%= posts.status %></p>
+      <button class="btn btn-primary"><i  id="bb"   name="bb" onclick="myFunction(this)" class="fa fa-thumbs-up" ></i></button>
+      <script> 
+      function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+      }
+      </script>
+    </div>
+  </div>
+  <% }) %>
+<div class="footer">
+  <p>CopyRights Ramoza</p>
+</div>
+
+</body>
+</html>

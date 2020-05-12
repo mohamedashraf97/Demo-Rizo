@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ramzy Page</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <%- include("header") %>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-xl-5=6 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>Login now to see posts</h1>
+          <h2>This site was made to practice</h2>
+          <div><a href="#register" class="btn-get-started scrollto">Get Started</a></div>
+          <div><a href="#login" class="btn-get-started scrollto">Login</a></div>
+        </div>
+        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+          <img src="/img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Register Section ======= -->
+    <section id="register" class="register">
+      <div class="container">
+        <form action="/register" method="post"> 
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
+            <img src="/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+            <h3>Register here !</h3>
+           
+          <div class="col-lg-6">
+            
+              <div class="form-row">
+                
+                <div class="form-group">
+                 
+                </div>
+              </div>
+
+            <div class="form-group">
+
+              	<h4>Name:</h4>            	
+              	<input required type="name" class="form-control" name="name" id="name" placeholder="Your Name" data-rule="name" data-msg="Please enter a valid Name" />
+              	<br>
+              	<h4>Email:</h4>            	
+              	<input required type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+              	<br>
+              	<h4>Password:</h4>
+                <input required type="text" class="form-control" name="password" id="password" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of Password" />
+                <div class="validate"></div>
+              </div>
+              <div class="text-center"><button type="submit">Register</button></div>
+            </form>
+          </div>
+
+        </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Register Section -->
+
+    <!-- ======= Login Section ======= -->
+    <form  autocomplete="off" action="/login" method="post">
+
+    <section id="login" class="login section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Login</h2>
+          <p>Welcome.</p>
+        </div>
+          <div class="form-group">
+            
+              	<h4>Email:</h4>            	
+              	<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"  required/>
+              	<br>
+              	<h4>Password:</h4>
+                <input type="text" class="form-control" name="password" id="password" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of Password" required />
+                <div class="validate"></div>
+              </div>
+            
+              <div class="text-center"><button type="submit">Login</button></div>
+          </form>
+          </div>
+    </section><!-- End login Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Mohamed Ashraf Ramzy Test site.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Saba Basha</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>Ramoza@example.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>01061789602</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <%- include("footer") %>
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/vendor/php-email-form/validate.js"></script>
+  <script src="/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="/vendor/counterup/counterup.min.js"></script>
+  <script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/vendor/venobox/venobox.min.js"></script>
+  <script src="/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/js/main.js"></script>
+
+</body>
+
+</html>
